@@ -1,0 +1,10 @@
+{
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "ip_address",
+        "listen_port": 8081,
+        "username": "user",
+        "password": "pass",
+        //...
+    }
+}

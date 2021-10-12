@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  nfi:
+    build:
+      context: ./
+    restart: unless-stopped
+    container_name: nfi
+    volumes:
+      - "./app:/app"
+      - "/path_to_nfi_bots:/path_to_nfi_bots"
+    ports:
+      - 8089:8089

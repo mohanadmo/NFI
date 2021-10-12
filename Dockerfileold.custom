@@ -1,0 +1,13 @@
+FROM python:3.9-slim-buster as production
+
+ENV PYTHONPATH "${PYTHONPATH}:/app"
+ENV PATH "./scripts:${PATH}"
+
+EXPOSE 80
+WORKDIR /app
+# Add code & install dependencies
+ADD . /app/
+# install python-rapidjson
+#RUN pip install --user rapidjson
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["run-webhook"]
